@@ -6,4 +6,5 @@ RUN brew install chezmoi neovim
 
 # install-packages is a wrapper for `apt` that helps skip a few commands in the docker env.
 RUN sudo install-packages \
-    fzf
+    fzf \
+    tree
