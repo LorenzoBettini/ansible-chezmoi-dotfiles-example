@@ -1,4 +1,6 @@
 # ~/.config/chezmoi/chezmoi.toml
+{{- $wm_choices := list "kde" "gnome" -}}
+{{- $window_manager := promptChoice "Which Window Manager" $wm_choices }}
 
 [data]
-window_manager = {{ promptString "window manager" | quote }}
+window_manager = {{- $window_manager | quote }}
